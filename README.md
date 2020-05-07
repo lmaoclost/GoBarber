@@ -50,4 +50,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Made whit :heartpulse: by  [Renan Oliveira](https://github.com/lmaoclost)
+Made with :heartpulse: by  [Renan Oliveira](https://github.com/lmaoclost)
