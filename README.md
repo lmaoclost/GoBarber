@@ -18,28 +18,34 @@
 
 ## :rocket: Sobre o desafio
 
-A aplicação consiste em um backend em node que será usado, tanto web quanto mobile, estes, densenvolvidos com React e React Native.
-
-O Objetivo é possibilitar o agendamento de um serviço entre o prestador e o cliente.
-
+API GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Cabeleireiros) aos clientes em suas regiões. Aplicação montada durante o bootcamp GoStack aplicando todo o conhecimento adquirido durante a jornada. Neste projeto foi utilizada as melhores práticas na construção do projeto, com o uso das tecnologias TypeScript, Express, TypeORM em cima do Ambiente e execução de javascript, o NodeJS.
 
 ## :pushpin: Um pouco sobre as ferramentas
 
 ### Back-End
 
-- Sucrase + Nodemon;
-- ESLint + Prettier + EditorConfig;
-- Sequelize (Utilizando PostgreSQL);
+- [TypeScript](https://www.typescriptlang.org/): Linguagem.
+- [NodeJs](https://nodejs.org/en/): Ambiente de Execução.
+- [Express](https://expressjs.com/): API Framework
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken): Autenticação JWT
+- [Multer](https://github.com/expressjs/multer): Upload de Arquivos
+- [Postgres](https://www.postgresql.org/): Banco de Dados
+- [TypeORM](https://typeorm.io/#/): ORM
+- [Eslint](https://eslint.org/): Padronização de código
+- [Jest](https://jestjs.io/): Testes
+- [tsyringe](https://github.com/microsoft/tsyringe): Lib de injeção de dependencias. -[uuidv4](https://github.com/thenativeweb/uuidv4#readme): uuid.
 
 ### **Em Desenvolvimento...**
 
 ## :computer: Instalação e execução
 
+Crie um BD PostgreSQL com o nome: gostack_gobarber
+
 ```
-yarn
-```
-```
-yarn dev
+$ cd /backend
+$ yarn
+$ yarn typeorm migration:run
+$ yarn dev:server
 ```
 
 A aplicação estará rodando no localhost:3333
@@ -50,4 +56,4 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Made with :heartpulse: by  [Renan Oliveira](https://github.com/lmaoclost)
+Made with :heartpulse: by [Renan Oliveira](https://github.com/lmaoclost)
