@@ -6,7 +6,7 @@
   Aplicação GoBarber
 </h1>
 
-<p align="center">Aplicação para agendamento de serviços de beleza.  :haircut:</p>
+<p align="center">Backend para agendamento de serviços de beleza.  :haircut:</p>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-191A1E">
@@ -18,7 +18,7 @@
 
 ## :rocket: Sobre o desafio
 
-O GoBarber é uma aplicação que conecta prestadores de serviço (Barbeiros e Cabeleireiros) aos clientes em suas regiões. Aplicação montada durante o bootcamp GoStack aplicando todo o conhecimento adquirido durante a jornada. Neste projeto foi utilizada as melhores práticas na construção do projeto, com o uso das tecnologias TypeScript, NodeJS, ReactJS e React Native.
+API GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Cabeleireiros) aos clientes em suas regiões. Aplicação montada durante o bootcamp GoStack aplicando todo o conhecimento adquirido durante a jornada. Neste projeto foi utilizada as melhores práticas na construção do projeto, com o uso das tecnologias TypeScript, Express, TypeORM em cima do Ambiente e execução de javascript, o NodeJS.
 
 ## :pushpin: Um pouco sobre as ferramentas
 
@@ -36,19 +36,22 @@ O GoBarber é uma aplicação que conecta prestadores de serviço (Barbeiros e C
 - [tsyringe](https://github.com/microsoft/tsyringe): Lib de injeção de dependencias.
 - [uuidv4](https://github.com/thenativeweb/uuidv4#readme): uuid.
 
-### Front-end
-
-- [TypeScript](https://www.typescriptlang.org/): Linguagem.
-- [React.js](https://reactjs.org/) - Framework Javascript para WEB
-
-### Mobile
-
-- [TypeScript](https://www.typescriptlang.org/): Linguagem.
-- [React Native](https://facebook.github.io/react-native/) - Framwork Javascript para APPs
-
 ### **Em Desenvolvimento...**
 
-## Verifique os Readmes dentro de cada pasta para rodar o projeto na sua máquina!
+## :computer: Instalação e execução
+
+Crie um BD PostgreSQL com o nome: gostack_gobarber
+
+```
+$ cd /backend
+$ yarn
+$ yarn typeorm migration:run
+$ yarn dev:server
+```
+
+A aplicação estará rodando no localhost:3333
+
+Para testar as rotas, utilize esse arquivo [Insomnia](Insomnia_2020-09-17)
 
 ## :memo: Licença
 
