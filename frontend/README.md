@@ -26,6 +26,9 @@ Frontend GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e 
 
 - [TypeScript](https://www.typescriptlang.org/): Linguagem.
 - [React.js](https://reactjs.org/) - Framework Javascript para WEB
+- [Eslint](https://eslint.org/): Padronização de código
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken): Autenticação JWT
+- [uuidv4](https://github.com/thenativeweb/uuidv4#readme): uuid.
 
 ### **Em Desenvolvimento...**
 
