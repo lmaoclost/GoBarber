@@ -18,31 +18,34 @@
 
 ## :rocket: Sobre o desafio
 
-Frontend GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Cabeleireiros) aos clientes em suas regiões. Aplicação montada durante o bootcamp GoStack aplicando todo o conhecimento adquirido durante a jornada. Neste projeto foi utilizada as melhores práticas na construção do projeto, com o uso das tecnologias TypeScript, ReactJS.
+Mobile GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Cabeleireiros) aos clientes em suas regiões. Aplicação montada durante o bootcamp GoStack aplicando todo o conhecimento adquirido durante a jornada. Neste projeto foi utilizada as melhores práticas na construção do projeto, com o uso das tecnologias TypeScript, React Native.
 
 ## :pushpin: Um pouco sobre as ferramentas
 
-### Frontend
+### Mobile
 
 - [TypeScript](https://www.typescriptlang.org/): Linguagem.
-- [React.js](https://reactjs.org/) - Framework Javascript para WEB
-- [Eslint](https://eslint.org/): Padronização de código
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken): Autenticação JWT
-- [uuidv4](https://github.com/thenativeweb/uuidv4#readme): uuid.
+- [React Native](https://facebook.github.io/react-native/) - Framwork Javascript para APPs
 
 ### **Em Desenvolvimento...**
 
 ## :computer: Instalação e execução
 
-Abra um terminal
+Siga esses [passos](https://react-native.rocketseat.dev/) disponibilizados pela própria Rocktseat para configurar seu emulador/dispositivo android que rodará a aplicação. Abra um terminal
 
 ```
-$ cd /frontend
+$ cd /mobile
 $ yarn
 $ yarn start
 ```
 
-A aplicação estará rodando no localhost:3000
+Em um outro terminal
+
+```
+$ yarn android
+```
+
+A aplicação estará rodando no seu emulador/dispositivo configurado!
 
 ## :memo: Licença
 

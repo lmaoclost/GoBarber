@@ -51,7 +51,7 @@ O GoBarber é uma aplicação que conecta prestadores de serviço (Barbeiros e C
 
 ### **Em Desenvolvimento...**
 
-## Verifique os Readmes dentro de cada pasta para rodar o projeto na sua máquina!
+Verifique os Readmes dentro de cada pasta para rodar o projeto na sua máquina!
 
 ## :memo: Licença
 
