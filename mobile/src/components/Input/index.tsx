@@ -1,15 +1,15 @@
 import React, {
   useEffect,
-  useCallback,
   useRef,
   useImperativeHandle,
   forwardRef,
   useState,
+  useCallback,
 } from 'react';
+
 import { TextInputProps } from 'react-native';
 import { useField } from '@unform/core';
-
-import { Container, TextInput, Icon } from './styles';
+import { Container, Icon, TextInput } from './styles';
 
 interface InputProps extends TextInputProps {
   name: string;
@@ -23,12 +23,12 @@ interface InputValueReference {
 interface InputRef {
   focus(): void;
 }
-
-const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
+const Input: React.RefForwardingComponent<InputRef, InputProps> = (
   { name, icon, ...rest },
   ref
 ) => {
   const inputElementRef = useRef<any>(null);
+
   const { registerField, defaultValue = '', fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
@@ -55,18 +55,12 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
     },
   }));
 
-  useImperativeHandle(ref, () => ({
-    focus() {
-      inputElementRef.current.focus();
-    },
-  }));
-
   useEffect(() => {
-    registerField<string>({
+    registerField({
       name: fieldName,
       ref: inputValueRef.current,
       path: 'value',
-      setValue(ref: any, value) {
+      setValue(_ref, value: string) {
         inputValueRef.current.value = value;
         inputElementRef.current.setNativeProps({ text: value });
       },
@@ -78,7 +72,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
   }, [fieldName, registerField]);
 
   return (
-    <Container isFocused={isFocused}>
+    <Container isFocused={isFocused} hasError={!!error}>
       <Icon
         name={icon}
         size={20}
@@ -86,8 +80,8 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
       />
       <TextInput
         ref={inputElementRef}
-        keyboardAppearance="dark"
         placeholderTextColor="#666360"
+        keyboardAppearance="dark"
         defaultValue={defaultValue}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
