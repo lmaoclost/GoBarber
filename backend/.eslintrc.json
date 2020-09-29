@@ -20,14 +20,28 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "import/no-unresolved": "off",
+    "no-underscore-dangle": "off",
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
+    "camelcase": "off",
+    "no-useless-constructor": "off",
+    "import/no-unresolved": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
         "argsIgnorePattern": "_"
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
       }
     ],
     "import/extensions": [
