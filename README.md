@@ -26,15 +26,22 @@ O GoBarber é uma aplicação que conecta prestadores de serviço (Barbeiros e C
 
 - [TypeScript](https://www.typescriptlang.org/): Linguagem.
 - [NodeJs](https://nodejs.org/en/): Ambiente de Execução.
-- [Express](https://expressjs.com/): API Framework
-- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken): Autenticação JWT
-- [Multer](https://github.com/expressjs/multer): Upload de Arquivos
-- [Postgres](https://www.postgresql.org/): Banco de Dados
-- [TypeORM](https://typeorm.io/#/): ORM
-- [Eslint](https://eslint.org/): Padronização de código
-- [Jest](https://jestjs.io/): Testes
+- [Express](https://expressjs.com/): API Framework.
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken): Autenticação JWT.
+- [Multer](https://github.com/expressjs/multer): Upload de Arquivos.
+- [Postgres](https://www.postgresql.org/): Banco de Dados.
+- [TypeORM](https://typeorm.io/#/): ORM.
+- [Eslint](https://eslint.org/): Padronização de código.
+- [Jest](https://jestjs.io/): Testes.
 - [tsyringe](https://github.com/microsoft/tsyringe): Lib de injeção de dependencias.
 - [uuidv4](https://github.com/thenativeweb/uuidv4#readme): uuid.
+- [NodeMailer](https://nodemailer.com/about/): Módulo de envio de emails.
+- [MongoDB](https://www.mongodb.com/): Banco de dados orientado a documentos.
+- [Ethereal Mail](https://ethereal.email/): Serviço de Email para desenvolvimento.
+- [AWS-SES](https://aws.amazon.com/pt/ses/): Serviço de Email para produção.
+- [AWS-S3](https://aws.amazon.com/pt/s3/): Armazenamento de Arquivos.
+- [Redis](https://redis.io/): Banco de dados utilizado como Cache para aplicação.
+- [Rate Limiter Flexible](https://github.com/animir/node-rate-limiter-flexible): Lib de proteção a DDoS.
 
 ### Front-end
 
