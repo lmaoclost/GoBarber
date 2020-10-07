@@ -205,7 +205,7 @@ export const Calendar = styled.aside`
   }
   .DayPicker,
   .DayPicker-Month {
-    width: 100%;
+    width: auto;
   }
   .DayPicker-Month {
     border-collapse: separate;
