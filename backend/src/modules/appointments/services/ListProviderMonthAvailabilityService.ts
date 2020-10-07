@@ -1,16 +1,14 @@
 import { injectable, inject } from 'tsyringe';
-import { getDaysInMonth, getDate } from 'date-fns';
+import { getDaysInMonth, getDate, isAfter } from 'date-fns';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
-// import User from '@modules/users/infra/typeorm/entities/User';
 
 interface IRequestDTO {
   provider_id: string;
   month: number;
   year: number;
 }
-
-type IResponse = Array<{
+type IResponseDTO = Array<{
   day: number;
   available: boolean;
 }>;
@@ -26,7 +24,7 @@ class ListProviderMonthAvailabilityService {
     provider_id,
     year,
     month,
-  }: IRequestDTO): Promise<IResponse> {
+  }: IRequestDTO): Promise<IResponseDTO> {
     const appointments = await this.appointmentsRepository.findAllInMonthFromProvider(
       {
         provider_id,
@@ -43,12 +41,15 @@ class ListProviderMonthAvailabilityService {
     );
 
     const availability = eachDayArray.map((day) => {
+      const compareDate = new Date(year, month - 1, day, 23, 59, 59);
+
       const appointmentsInDay = appointments.filter((appointment) => {
         return getDate(appointment.date) === day;
       });
       return {
         day,
-        available: appointmentsInDay.length < 10,
+        available:
+          isAfter(compareDate, new Date()) && appointmentsInDay.length < 10,
       };
     });
 
