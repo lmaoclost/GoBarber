@@ -47,14 +47,15 @@ API GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Cabel
 
 ## :computer: Instalação e execução
 
-Utilizando docker, dê esses comandos:
+Utilizando docker, dê os comandos de criação dos bancos, PostgreSQL, MongoDB e Redis, respectivamente:
 
 ```
 $ docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 $ docker run --name mongodb -p 27017:27017 -d -t mongo
+$ docker run --name redis -p 6379:6379 -d -t redis:alpine
 ```
 
-Conecte-se ao container gostack_postgres e crie um banco de dados chamado gostack_gobarber.
+Conecte-se ao container gostack_postgres e crie um banco de dados chamado gostack_gobarber. Em caso de alteração do banco de dados ou senha, vá para o [Arquivo de configuração do TypeORM](ormconfig.json) e altere as informações desejadas.
 
 ```
 $ cd /backend
@@ -65,14 +66,7 @@ $ yarn dev:server
 
 A aplicação estará rodando no http://localhost:3333.
 
-Para testar as rotas, utilize esse arquivo [Insomnia](Insomnia_2020-09-17)
-
-#Opcional
-Você pode subir o Redis para o cache da aplicação utilizando:
-
-```
-$ docker run --name redis -p 6379:6379 -d -t redis:alpine
-```
+Para testar as rotas, utilize esse arquivo [Insomnia](Insomnia_2020-10-07)
 
 ##Testes
 
