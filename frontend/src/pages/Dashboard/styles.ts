@@ -13,7 +13,6 @@ export const HeaderContent = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-
   > img {
     height: 80px;
   }
@@ -21,11 +20,10 @@ export const HeaderContent = styled.div`
     margin-left: auto;
     background: transparent;
     border: 0;
-
     svg {
       color: #999591;
-      width: 20px;
       height: 20px;
+      width: 20px;
     }
   }
 `;
@@ -34,25 +32,28 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
   margin-left: 80px;
-
   img {
     width: 56px;
     height: 56px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
   }
-
   div {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
     line-height: 24px;
-
     span {
       color: #f4ede8;
     }
-
-    strong {
+    a {
+      text-decoration: none;
       color: #ff9000;
+      transition: opacity 0.2s;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 `;
