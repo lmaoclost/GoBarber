@@ -26,8 +26,9 @@ Mobile GoBarber, aplicação que conecta prestadores de serviço (Barbeiros e Ca
 
 - [TypeScript](https://www.typescriptlang.org/): Linguagem.
 - [React Native](https://facebook.github.io/react-native/) - Framwork Javascript para APPs
+- [Eslint](https://eslint.org/): Padronização de código.
 
-### **Em Desenvolvimento...**
+### **Finalizado**
 
 ## :computer: Instalação e execução
 
